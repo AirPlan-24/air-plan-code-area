@@ -1,157 +1,92 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<link rel="stylesheet" href="styles.css">
+AirPlan - Página Web de Viajes
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página Web de Viajes - AirPlan</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Aquí deberías enlazar tu archivo de estilos CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@chatgpt/chatgpt.min.js"></script> <!-- Integración de Chatbot -->
-</head>
-<body>
-<!-- Header -->
-<header>
-    <nav>
-        <ul>
-            <li><a href="Airplan.html">Inicio</a></li>
-            <li><a href="login.html">Iniciar Sesión</a></li> <!-- Enlace a la página de inicio de sesión -->
-        </ul>
-    </nav>
-</header>
+Descripción
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#paquetes">Paquetes Destacados</a></li>
-                <li><a href="#usuarios">Usuarios</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#notificaciones">Notificaciones</a></li>
-            </ul>
-        </nav>
-    </header>
+AirPlan es una página web diseñada para ofrecer a los usuarios la posibilidad de explorar nuevos destinos, comprar paquetes de viaje y gestionar sus reservas de forma sencilla e intuitiva. La plataforma cuenta con diversas secciones como paquetes destacados, blog, perfil de usuario, productos y un chatbot integrado para asistencia.
 
-    <!-- Apartado de inicio -->
-    <section id="inicio">
-        <h1>Bienvenidos a AirPlan</h1>
-        <p>Explora nuevos destinos, compra paquetes y reserva tus aventuras de manera fácil y rápida.</p>
-        <!-- Código QR para inicio de sesión -->
-        <div class="qr-login">
-            <p>Escanea el QR para iniciar sesión con AirPlan:</p>
-            <img src="qr-code.png" alt="Código QR para inicio de sesión">
-        </div>
-    </section>
+Estructura del Proyecto
 
-    <!-- Configuración de notificaciones -->
-    <section id="configuracion">
-        <h2>Configuración de Notificaciones</h2>
-        <form>
-            <label for="notificaciones-email">Recibir notificaciones por email</label>
-            <input type="checkbox" id="notificaciones-email">
-            <label for="notificaciones-sms">Recibir notificaciones por SMS</label>
-            <input type="checkbox" id="notificaciones-sms">
-            <button type="submit">Guardar Configuración</button>
-        </form>
-    </section>
+El archivo principal del proyecto es index.html (antes AirPlan.html), que contiene la estructura principal de la web. A continuación, se detallan las secciones y funcionalidades implementadas:
 
-    <!-- Términos y condiciones -->
-    <section id="terminos">
-        <h2>Términos y Condiciones</h2>
-        <p>Aquí van los términos y condiciones del sitio web, incluyendo las políticas sobre cookies.</p>
-        <button onclick="window.location.href='terminos.html'">Leer Términos</button>
-    </section>
+1. Encabezado (header)
 
-    <!-- Paquetes destacados -->
-    <section id="paquetes">
-        <h2>Paquetes Destacados</h2>
-        <p>Estamos en Carnaval, aquí tienes nuestras opciones recomendadas:</p>
-        <div class="paquete">
-            <h3>Paquete 1: Carnaval en Río</h3>
-            <button>Ver Paquete</button>
-        </div>
-        <div class="paquete">
-            <h3>Paquete 2: Carnaval en Barranquilla</h3>
-            <button>Ver Paquete</button>
-        </div>
-    </section>
+Contiene un menú de navegación con enlaces a las principales secciones de la página.
 
-    <!-- Usuarios -->
-    <section id="usuarios">
-        <h2>Usuarios</h2>
-        <p>Conecta con otros usuarios, comparte tus reseñas y recomendaciones.</p>
-        <div id="chatbot-container">
-            <!-- ChatBot BAI integrado con versión ChatGPT 4.0 -->
-            <div id="chatbot">
-                <h3>Chat BAI - Asistente Virtual</h3>
-                <div id="chat-box"></div>
-                <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
-                <button onclick="sendMessage()">Enviar</button>
-            </div>
-        </div>
-    </section>
+Menú con enlaces a inicio de sesión y navegación interna de la web.
 
-    <!-- Productos -->
-    <section id="productos">
-        <h2>Productos</h2>
-        <p>Busca tus productos a través de filtros:</p>
-        <form>
-            <label for="fecha">Fecha de viaje:</label>
-            <input type="date" id="fecha">
-            <label for="noches">Número de noches:</label>
-            <input type="number" id="noches">
-            <label for="precio">Precio:</label>
-            <input type="range" id="precio" min="100" max="1000">
-            <button type="submit">Buscar</button>
-        </form>
-    </section>
+2. Secciones Principales
 
-    <!-- Blog -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="entrada">
-            <h3>¡Consejos para viajar al Caribe!</h3>
-            <p>Lee nuestras últimas entradas y conoce los mejores consejos para tus viajes.</p>
-            <button>Leer más</button>
-        </div>
-    </section>
+Inicio (#inicio)
 
-    <!-- Perfil -->
-    <section id="perfil">
-        <h2>Mi Perfil</h2>
-        <p>Con tu perfil podrás gestionar tus compras, preferencias y más.</p>
-        <button>Ver Perfil</button>
-    </section>
+Mensaje de bienvenida.
 
-    <!-- Panel de Notificaciones -->
-    <section id="notificaciones">
-        <h2>Panel de Notificaciones</h2>
-        <ul>
-            <li>Nuevo seguidor: Juan Pérez</li>
-            <li>Comentario en tu reseña: ¡Qué gran viaje!</li>
-            <li>Reseña nueva de tu producto favorito</li>
-        </ul>
-    </section>
+Código QR para facilitar el inicio de sesión.
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 AirPlan. Todos los derechos reservados.</p>
-    </footer>
+Configuración de Notificaciones (#configuracion)
 
-    <script>
-        // Aquí va tu código JavaScript para funcionalidades interactivas
-        function sendMessage() {
-            let message = document.getElementById("chat-input").value;
-            let chatBox = document.getElementById("chat-box");
-            chatBox.innerHTML += `<p><strong>Tú:</strong> ${message}</p>`;
-            document.getElementById("chat-input").value = ''; // Limpiar el campo de texto
-        }
-    </script>
-<script src="script.js"></script>
+Formulario para activar/desactivar notificaciones por email y SMS.
 
-</body>
-</html>
+Términos y Condiciones (#terminos)
+
+Breve descripción con un botón para acceder a la página completa de términos.
+
+Paquetes Destacados (#paquetes)
+
+Presenta paquetes de viaje en oferta, incluyendo opciones para el carnaval.
+
+Usuarios (#usuarios)
+
+Espacio para interactuar con otros usuarios y compartir reseñas.
+
+Chatbot integrado basado en ChatGPT 4.0.
+
+Productos (#productos)
+
+Formulario con filtros para buscar paquetes según fecha, número de noches y precio.
+
+Blog (#blog)
+
+Contiene artículos de interés sobre viajes con opción de lectura extendida.
+
+Perfil (#perfil)
+
+Sección donde los usuarios pueden gestionar sus compras y preferencias.
+
+Panel de Notificaciones (#notificaciones)
+
+Lista de actualizaciones como seguidores, comentarios y reseñas.
+
+3. Pie de Página (footer)
+
+Contiene los derechos de autor y la información legal.
+
+Archivos Incluidos
+
+index.html: Archivo principal con la estructura de la web.
+
+styles.css: Archivo CSS para el diseño de la página.
+
+script.js: Contiene el código JavaScript para la interacción con el usuario.
+
+qr-code.png: Imagen del código QR para iniciar sesión.
+
+terminos.html: Página con los términos y condiciones completos.
+
+Instrucciones de Uso
+
+Renombrar AirPlan.html a index.html si es necesario.
+
+Asegurar que los archivos styles.css y script.js están en la misma carpeta.
+
+Abrir index.html en un navegador web.
+
+Mejoras Futuras
+
+Implementar backend para autenticación de usuarios.
+
+Mejorar la integración del chatbot con inteligencia artificial avanzada.
+
+Agregar funcionalidad para realizar pagos en línea.
+
+Autor: AirPlan TeamAño: 2025
+
