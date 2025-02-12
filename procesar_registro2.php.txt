@@ -1,0 +1,44 @@
+<?php
+// Incluir el archivo de configuración para la conexión a la base de datos
+include('config.php');
+
+// Recibir los datos del formulario
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$confirmPassword = $_POST['confirm-password'];
+$telefono = $_POST['telefono'];
+
+// Validar que las contraseñas coinciden
+if ($password !== $confirmPassword) {
+    echo "Las contraseñas no coinciden.";
+    exit;
+}
+
+// Encriptar la contraseña usando password_hash (para mayor seguridad)
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+// Verificar si el correo electrónico ya está registrado
+$sql = "SELECT * FROM usuarios WHERE email = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "Este correo electrónico ya está registrado.";
+    exit;
+}
+
+// Insertar el nuevo usuario en la base de datos
+$sql = "INSERT INTO usuarios (nombre, email, password, telefono) VALUES ('$nombre', '$email', '$passwordHash', '$telefono')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "¡Registro exitoso!";
+    // Redirigir a la página de inicio de sesión después del registro
+    header("Location: login.html");
+    exit;
+} else {
+    echo "Error al registrar usuario: " . $conn->error;
+}
+
+// Cerrar la conexión
+$conn->close();
+?>

@@ -1,0 +1,168 @@
+/* Reseteo de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #B79DFF; /* Lila */
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #A4E1B0; /* Verde clarito opaco */
+}
+
+/* Secciones */
+section {
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: white;
+}
+
+h1, h2, h3 {
+    color: #5E4B8B; /* Lila oscuro */
+}
+
+button {
+    background-color: #A4E1B0; /* Verde clarito opaco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+button:hover {
+    background-color: #8AD68D; /* Verde más oscuro */
+}
+
+/* Formulario */
+input[type="text"], input[type="number"], input[type="date"], input[type="checkbox"], input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Estilo para el ChatBot */
+#chatbot-container {
+    background-color: #B79DFF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#chat-box {
+    background-color: #f9f9f9;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#chat-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#chatbot button {
+    background-color: #A4E1B0; /* Verde clarito */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para la tabla de Paquetes */
+.paquete {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.paquete h3 {
+    color: #5E4B8B; /* Lila oscuro */
+}
+
+.paquete button {
+    background-color: #A4E1B0; /* Verde clarito */
+    border-radius: 5px;
+    border: none;
+}
+
+/* Blog */
+.entrada {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #B79DFF; /* Lila */
+    color: white;
+    margin-top: 30px;
+}
+
+/* Estilo de panel de notificaciones */
+#notificaciones ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#notificaciones li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#notificaciones li:hover {
+    background-color: #A4E1B0; /* Verde clarito */
+    color: white;
+}

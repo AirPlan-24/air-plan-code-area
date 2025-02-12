@@ -1,0 +1,21 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Recoger los datos del formulario
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm-password'];
+    $telefono = $_POST['telefono'];
+
+    // Validación básica
+    if ($password !== $confirmPassword) {
+        echo "Las contraseñas no coinciden.";
+        exit;
+    }
+
+    // Aquí podrías agregar el código para guardar al usuario en una base de datos
+    // Asegúrate de usar métodos seguros, como hashing para la contraseña
+
+    echo "¡Usuario registrado con éxito!";
+}
+?>

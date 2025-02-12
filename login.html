@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - AirPlan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de enlazar tu archivo CSS -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script> <!-- Script para Google SignIn -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Airplan.html">Inicio</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido de la página de inicio de sesión -->
+    <section id="login">
+        <h1>Iniciar Sesión</h1>
+
+        <!-- Opción para iniciar sesión con Google -->
+        <div class="login-btn" id="google-signin-button">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
+
+        <!-- Opción para iniciar sesión con Facebook -->
+        <div class="login-btn" id="facebook-signin-button">
+            <button onclick="facebookLogin()">Iniciar sesión con Facebook</button>
+        </div>
+
+        <!-- Opción para iniciar sesión con correo electrónico -->
+        <div class="login-btn" id="email-signin-button">
+            <button onclick="showEmailLogin()">Iniciar sesión con Correo Electrónico</button>
+        </div>
+
+        <!-- Formulario de inicio de sesión con correo electrónico (oculto inicialmente) -->
+        <div id="email-login-form" style="display: none;">
+            <h2>Iniciar sesión con Correo Electrónico</h2>
+            <form action="procesar_login.php" method="post">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required placeholder="Tu contraseña">
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+
+        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AirPlan. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script1.js"></script> <!-- Asegúrate de enlazar tu archivo JS -->
+<!-- SDK de Facebook -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="M3mFjpFh"></script>
+
+</body>
+</html>

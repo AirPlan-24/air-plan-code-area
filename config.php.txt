@@ -1,0 +1,15 @@
+<?php
+// Datos de conexión a la base de datos
+$servername = "localhost"; // Cambia si es necesario
+$username = "root"; // Cambia por tu nombre de usuario de MySQL
+$password = ""; // Cambia por tu contraseña de MySQL
+$dbname = "airplan"; // Nombre de tu base de datos
+
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+?>
